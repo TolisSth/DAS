@@ -1,6 +1,5 @@
 <h1>DAS</h1>
 Development assistant script is a simple script that help developers download their favorite tools much faster and easier.
-<hr> 
 <h1>Using the scirpt</h1> 
 <ul>
 <li>Download the script</li> 
@@ -20,6 +19,6 @@ Development assistant script is a simple script that help developers download th
 <b>Currently supported languages</b>
 <ul>
 <li>Python<li>
-<li>C/C++<li>
+<li>C\/C++<li>
 <li>Java</li>
 <ul>
