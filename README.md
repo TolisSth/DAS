@@ -21,7 +21,7 @@ Development assistant script is a simple script that help developers download th
 <li>Python</li>
 <li>C/C++</li>
 <li>Java</li>
-<ul>
+</ul>
 <h1>Requirments</h1>
 <ul>
 <li><b>yay AUR helper</b> if you are using Arch derivatives</li>
