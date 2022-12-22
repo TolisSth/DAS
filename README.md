@@ -22,7 +22,7 @@ Development Assistant Script or else <b>DAS</b> is a simple script that will hel
 <li>C/C++</li>
 <li>Java</li>
 </ul>
-<h1>Requirments</h1>
+<h1>Requirements</h1>
 <ul>
 <li><b>yay AUR helper</b> if you are using Arch derivatives</li>
 <li><b>snap package manager</b> if you are using Debian derivatives</li>
