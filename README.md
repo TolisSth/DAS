@@ -1,5 +1,5 @@
 <h1>DAS</h1>
-Development assistant script is a simple script that help developers download their favorite tools much faster and easier.
+Development Assistant Script or else <b>DAS</b> is a simple script that will help <b>*YOU*</b> the developer download a variety of tools for the language that you develop on, much easier and faster. This tools will be a compiler or interpeter (depends on the language) and an editor or a full blown IDE sometimes.
 <h1>Using the scirpt</h1> 
 <ul>
 <li>Download the script</li> 
