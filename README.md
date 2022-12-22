@@ -22,3 +22,8 @@ Development assistant script is a simple script that help developers download th
 <li>C/C++</li>
 <li>Java</li>
 <ul>
+<h1>Requirments</h1>
+<ul>
+<li><b>yay AUR helper</b> if you are using Arch derivatives</li>
+<li><b>snap package manager</b> if you are using Debian derivatives</li>
+</ul>
