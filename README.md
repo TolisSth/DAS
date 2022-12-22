@@ -18,7 +18,7 @@ Development assistant script is a simple script that help developers download th
 </ul>
 <b>Currently supported languages</b>
 <ul>
-<li>Python<li>
-<li>C\/C++<li>
+<li>Python</li>
+<li>C/C++</li>
 <li>Java</li>
 <ul>
