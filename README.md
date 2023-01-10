@@ -15,6 +15,7 @@ Development Assistant Script or else <b>DAS</b> is a simple script that will hel
 <li>Debian</li>
 <li>Ubuntu</li>
 <li>Mint</li>
+<li>Pop OS</li>
 </ul>
 <b>Currently supported languages</b>
 <ul>
