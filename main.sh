@@ -1,3 +1,4 @@
+#!/bin/bash
 #This is a shell script that will enable developers to download easily their preferred tools with a few keypresses
 #Copyright (C) 2022 Apostolos Halis 
 #
@@ -13,7 +14,6 @@
 #
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#!/bin/bash
 
 #glbal variables 
 correct=false #this is used in input checks 
