@@ -56,7 +56,7 @@ proprietary_debian_java=("intellij-idea-professional --classic" "software-proper
 open_source_arch_java=("intellij-idea-community-edition" "jdk-openjdk")
 proprietary_arch_java=("intellij-idea-ultimate-edition" "jre-lts") #this requires yay or another AUR helper
 #distributor ID 
-distributor_id=("arch" "manjaro" "debian" "ubuntu" "mint")
+distributor_id=("arch" "manjaro" "debian" "ubuntu" "mint" "pop")
 
 #Greeting the user
 echo "--------------------------------------------------"
@@ -76,7 +76,7 @@ echo "--------------------------------------------------"
 . /etc/os-release
 
 #I am only checking if snap is installed in Debian derivatives because none of the Arch one need it 
-if [ "$ID" = "${distribution_id[2]}" ] || [ "$ID" = "${distribution_id[3]}" ] || [ "$ID" = "${distribution_id[4]}" ]; then 
+if [ "$ID" = "${distribution_id[2]}" ] || [ "$ID" = "${distribution_id[3]}" ] || [ "$ID" = "${distribution_id[4]}" ] || [ "$ID" = "${distribution_id[5]}" ]; then 
     #checking if the snap package manager is available (it will be needed for some of the software installed)
     if ! command -v snap > /dev/null; then 
         echo "snap command was not found. Please install snapcraft from snapcraft.io and try running the script again."
@@ -142,7 +142,7 @@ done
 #then I set a counter that excludes them from the loop and finally I go through the loop
 #Those items as adviced by the array building 
 #rules above should be placed first in the loop so this can happen easily
-if [ "$ID" = "${distribution_id[2]}" ] || [ "$ID" = "${distribution_id[3]}" ] || [ "$ID" = "${distribution_id[4]}" ]; then 
+if [ "$ID" = "${distribution_id[2]}" ] || [ "$ID" = "${distribution_id[3]}" ] || [ "$ID" = "${distribution_id[4]}" ] || [ "$ID" = "${distribution_id[5]}" ]; then 
     case $language in 
         a) 
             echo "Python toolchain will be downloaded..."
