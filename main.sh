@@ -56,7 +56,7 @@ proprietary_debian_java=("intellij-idea-professional --classic" "software-proper
 open_source_arch_java=("intellij-idea-community-edition" "jdk-openjdk")
 proprietary_arch_java=("intellij-idea-ultimate-edition" "jre-lts") #this requires yay or another AUR helper
 #distributor ID 
-distributor_id=("arch" "manjaro" "debian" "ubuntu" "mint" "pop")
+distributor_id=("arch" "manjaro" "debian" "ubuntu" "linuxmint" "pop")
 
 #Greeting the user
 echo "--------------------------------------------------"
