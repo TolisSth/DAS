@@ -41,18 +41,18 @@ declare -a distributor_id # this were all the distributor IDs are
 #in the installing part of this scirpt)
 #FORMAT: array_i_declared=("package installed with yay AUR helper" "package installed by pacman" "package installed by pacman")
 #python 
-open_source_debian_python=("pycharm-community --classic" "python3" "python3-pip")
+open_source_debian_python=("pycharm-community" "python3" "python3-pip")
 proprietary_debian_python=("pycharm-professional --classic" "python3" "python3-pip")
 open_source_arch_python=("pycharm-community-edition" "python3" "python-pip")
 proprietary_arch_python=("pycharm-professional" "python3" "python-pip") #this requires yay or another AUR helper
 #C/C++ 
 open_source_debian_CCPP=("codeblocks" "build-essential") #needs universe repo activation 
-proprietary_debian_CCPP=("clion --classic" "build-essential") #this requires snap 
+proprietary_debian_CCPP=("clion" "build-essential") #this requires snap 
 open_source_arch_CCPP=("codeblocks" "base-devel")
 proprietary_arch_CCPP=("clion" "base-devel") #this requires yay or another AUR helper
 #java 
-open_source_debian_java=("intellij-idea-community --classic" "default-jdk")
-proprietary_debian_java=("intellij-idea-professional --classic" "software-properties-common" "oracle-java11-installer") #this requires enabling a PPA
+open_source_debian_java=("intellij-idea-community" "default-jdk")
+proprietary_debian_java=("intellij-idea-professional" "software-properties-common" "oracle-java11-installer") #this requires enabling a PPA
 open_source_arch_java=("intellij-idea-community-edition" "jdk-openjdk")
 proprietary_arch_java=("intellij-idea-ultimate-edition" "jre-lts") #this requires yay or another AUR helper
 #distributor ID 
@@ -76,7 +76,7 @@ echo "--------------------------------------------------"
 . /etc/os-release
 
 #I am only checking if snap is installed in Debian derivatives because none of the Arch one need it 
-if [ "$ID" = "${distribution_id[2]}" ] || [ "$ID" = "${distribution_id[3]}" ] || [ "$ID" = "${distribution_id[4]}" ] || [ "$ID" = "${distribution_id[5]}" ]; then 
+if [ "$ID" = "${distributor_id[2]}" ] || [ "$ID" = "${distributor_id[3]}" ] || [ "$ID" = "${distributor_id[4]}" ] || [ "$ID" = "${distributor_id[5]}" ]; then 
     #checking if the snap package manager is available (it will be needed for some of the software installed)
     if ! command -v snap > /dev/null; then 
         echo "snap command was not found. Please install snapcraft from snapcraft.io and try running the script again."
@@ -142,7 +142,7 @@ done
 #then I set a counter that excludes them from the loop and finally I go through the loop
 #Those items as adviced by the array building 
 #rules above should be placed first in the loop so this can happen easily
-if [ "$ID" = "${distribution_id[2]}" ] || [ "$ID" = "${distribution_id[3]}" ] || [ "$ID" = "${distribution_id[4]}" ] || [ "$ID" = "${distribution_id[5]}" ]; then 
+if [ "$ID" = "${distributor_id[2]}" ] || [ "$ID" = "${distributor_id[3]}" ] || [ "$ID" = "${distributor_id[4]}" ] || [ "$ID" = "${distributor_id[5]}" ]; then 
     case $language in 
         a) 
             echo "Python toolchain will be downloaded..."
@@ -175,7 +175,7 @@ if [ "$ID" = "${distribution_id[2]}" ] || [ "$ID" = "${distribution_id[3]}" ] ||
 
             ;; 
         c) 
-            echo "Java will be downloaded..."
+            echo "Java toolchain will be downloaded..."
             if [ "$software_type" = "a" ]; then 
                 for item in ${open_source_debian_java[@]}; do 
                     apt install $item 
