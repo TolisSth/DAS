@@ -28,3 +28,9 @@ Development Assistant Script or else <b>DAS</b> is a simple script that will hel
 <li><b>yay AUR helper</b> if you are using Arch derivatives</li>
 <li><b>snap package manager</b> if you are using Debian derivatives</li>
 </ul>
+<h1>Troubleshooting</h1>
+If something like this<br>
+<code>bash: ./main.sh: /bin/bash^M: bad interpreter: No such file or directory1</code><br>
+appears, use<br>
+<code>sed -i -e 's/\r$//' main.sh</code><br>
+before running the script. 
