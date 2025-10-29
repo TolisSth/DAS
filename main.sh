@@ -1,6 +1,6 @@
 #!/bin/bash
 #This is a shell script that will enable developers to download easily their preferred tools with a few keypresses
-#Copyright (C) 2022 Apostolos Halis 
+#Copyright (C) 2022 - 2025 Apostolos Chalis <achalis@csd.auth.gr> 
 #
 #This program is free software: you can redistribute it and/or modify
 #it under the terms of the GNU General Public License as published by
@@ -59,9 +59,9 @@ proprietary_arch_java=("intellij-idea-ultimate-edition" "jre-lts") #this require
 distributor_id=("arch" "manjaro" "debian" "ubuntu" "linuxmint" "pop")
 
 #Greeting the user
-echo "--------------------------------------------------"
-echo "-- Welcome to Toli's Developer assistant script --"
-echo "--------------------------------------------------"
+echo "----------------------------------"
+echo "-- Developer download assistant --"
+echo "----------------------------------"
 
     ###############################################
 ######checking if required commands are installed######
