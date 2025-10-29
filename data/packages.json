@@ -1,0 +1,81 @@
+{
+  "python": {
+    "debian": {
+      "open_source": [
+        "pycharm-community",
+        "python3",
+        "python3-pip"
+      ],
+      "proprietary": [
+        "pycharm-professional --classic",
+        "python3",
+        "python3-pip"
+      ]
+    },
+    "arch": {
+      "open_source": [
+        "pycharm-community-edition",
+        "python3",
+        "python-pip"
+      ],
+      "proprietary": [
+        "pycharm-professional",
+        "python3",
+        "python-pip"
+      ]
+    }
+  },
+  "C_Cpp": {
+    "debian": {
+      "open_source": [
+        "codeblocks",
+        "build-essential"
+      ],
+      "proprietary": [
+        "clion",
+        "build-essential"
+      ]
+    },
+    "arch": {
+      "open_source": [
+        "codeblocks",
+        "base-devel"
+      ],
+      "proprietary": [
+        "clion",
+        "base-devel"
+      ]
+    }
+  },
+  "java": {
+    "debian": {
+      "open_source": [
+        "intellij-idea-community",
+        "default-jdk"
+      ],
+      "proprietary": [
+        "intellij-idea-professional",
+        "software-properties-common",
+        "oracle-java11-installer"
+      ]
+    },
+    "arch": {
+      "open_source": [
+        "intellij-idea-community-edition",
+        "jdk-openjdk"
+      ],
+      "proprietary": [
+        "intellij-idea-ultimate-edition",
+        "jre-lts"
+      ]
+    }
+  },
+  "distributor_id": [
+    "arch",
+    "manjaro",
+    "debian",
+    "ubuntu",
+    "linuxmint",
+    "pop"
+  ]
+}
