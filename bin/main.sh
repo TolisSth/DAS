@@ -59,6 +59,7 @@ proprietary_arch_java=("intellij-idea-ultimate-edition" "jre-lts") #this require
 distributor_id=("arch" "manjaro" "debian" "ubuntu" "linuxmint" "pop")
 
 #Greeting the user
+clear
 echo "----------------------------------"
 echo "-- Developer download assistant --"
 echo "----------------------------------"
@@ -113,6 +114,7 @@ do
         correct=true
 fi
 done
+clear
 
 #Getting the user's preferred language
 read -p"Choose the language that you want to install tools for"$'\n'"a)Python"$'\n'"b)C/C++"$'\n'"c)Java"$'\n' language
@@ -130,6 +132,8 @@ do
         correct=true
 fi
 done
+clear
+
    ###################
 #####installing part#####
    ###################
@@ -149,10 +153,12 @@ if [ "$ID" = "${distributor_id[2]}" ] || [ "$ID" = "${distributor_id[3]}" ] || [
             if [ "$software_type" = "a" ]; then 
                 for item in ${open_source_debian_python[@]}; do 
                     apt install $item 
+		    clear
                 done 
             else 
                 for item in ${proprietary_debian_python[@]}; do 
                     apt install $item 
+		    clear
                 done
             fi 
             ;; 
@@ -163,6 +169,7 @@ if [ "$ID" = "${distributor_id[2]}" ] || [ "$ID" = "${distributor_id[3]}" ] || [
                 add-apt-repository universe
                 for item in ${open_source_debian_CCPP[@]}; do 
                     apt install $item 
+		    clear
                 done 
             else 
                 snap install ${proprietary_debian_CCPP[0]}
@@ -170,6 +177,7 @@ if [ "$ID" = "${distributor_id[2]}" ] || [ "$ID" = "${distributor_id[3]}" ] || [
                 while [ "$i" -lt "${#proprietary_debian_CCPP[@]}" ]; do 
                     apt install "${proprietary_debian_CCPP[i]}"
                     i=$((i+1))
+		    clear
                 done
             fi
 
@@ -179,11 +187,13 @@ if [ "$ID" = "${distributor_id[2]}" ] || [ "$ID" = "${distributor_id[3]}" ] || [
             if [ "$software_type" = "a" ]; then 
                 for item in ${open_source_debian_java[@]}; do 
                     apt install $item 
+		    clear
                 done 
             else 
                 add-apt-repository ppa:linuxuprising/java
                 for item in ${proprietary_debian_java[@]}; do 
                     apt install $item 
+		    clear
                 done
             fi 
             ;; 
@@ -195,12 +205,14 @@ elif [ "$ID" = "${distributor_id[0]}" ] || [ "$ID" = "${distributor_id[1]}" ]; t
             if [ "$software_type" = "a" ]; then 
                 for item in ${open_source_arch_python[@]}; do 
                     pacman -S $item 
+		    clear
                 done 
             else 
                 yay -S ${proprietary_arch_python[0]}
                 i=1
                 while [ "$i" -lt "${#proprietary_arch_python[@]}" ]; do 
                     pacman -S "${proprietary_arch_python[i]}"
+		    clear
                     i=$((i+1))
                 done
             fi
@@ -210,6 +222,7 @@ elif [ "$ID" = "${distributor_id[0]}" ] || [ "$ID" = "${distributor_id[1]}" ]; t
             if [ "$software_type" = "a" ]; then 
                 for item in ${open_source_arch_CCPP[@]}; do 
                     pacman -S $item 
+		    clear
                 done 
             else 
                 yay -S ${proprietary_arch_python[0]}
@@ -217,6 +230,7 @@ elif [ "$ID" = "${distributor_id[0]}" ] || [ "$ID" = "${distributor_id[1]}" ]; t
                 while [ "$i" -lt "${#proprietary_arch_CCPP[@]}" ]; do 
                     pacman -S "${proprietary_arch_CCPP[i]}"
                     i=$((i+1))
+		    clear
                 done
             fi
             ;; 
@@ -225,10 +239,12 @@ elif [ "$ID" = "${distributor_id[0]}" ] || [ "$ID" = "${distributor_id[1]}" ]; t
             if [ "$software_type" = "a" ]; then 
                 for item in ${open_source_arch_java[@]}; do 
                     pacman -S $item 
+		    clear
                 done 
             elif [ "$software_type" = "b" ]; then 
                 for item in ${open_source_arch_java[@]}; do 
                     yay -S $item 
+		    clear
                 done 
             fi 
             ;; 
