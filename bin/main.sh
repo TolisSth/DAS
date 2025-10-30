@@ -18,45 +18,6 @@
 #glbal variables 
 correct=false #this is used in input checks 
 #names for open/closed source packages for Debian and Arch derivatives 
-#declaring arrays 
-#python 
-declare -a open_source_debian_python 
-declare -a proprietary_debian_python
-declare -a open_source_arch_python
-declare -a proprietary_arch_python 
-#C/C++ 
-declare -a open_source_debian_CCPP
-declare -a proprietary_debian_CCPP
-declare -a open_source_arch_CCPP
-declare -a proprietary_arch_CCPP
-#java 
-declare -a open_source_debian_java
-declare -a proprietary_debian_java
-declare -a open_source_arch_java
-declare -a proprietary_arch_java
-#distributor ID array 
-declare -a distributor_id # this were all the distributor IDs are 
-#initilizing arrays 
-#the one rule in building extra arrays is to place the packages that need a different package manager first (the reason behind this will be explained
-#in the installing part of this scirpt)
-#FORMAT: array_i_declared=("package installed with yay AUR helper" "package installed by pacman" "package installed by pacman")
-#python 
-open_source_debian_python=("pycharm-community" "python3" "python3-pip")
-proprietary_debian_python=("pycharm-professional --classic" "python3" "python3-pip")
-open_source_arch_python=("pycharm-community-edition" "python3" "python-pip")
-proprietary_arch_python=("pycharm-professional" "python3" "python-pip") #this requires yay or another AUR helper
-#C/C++ 
-open_source_debian_CCPP=("codeblocks" "build-essential") #needs universe repo activation 
-proprietary_debian_CCPP=("clion" "build-essential") #this requires snap 
-open_source_arch_CCPP=("codeblocks" "base-devel")
-proprietary_arch_CCPP=("clion" "base-devel") #this requires yay or another AUR helper
-#java 
-open_source_debian_java=("intellij-idea-community" "default-jdk")
-proprietary_debian_java=("intellij-idea-professional" "software-properties-common" "oracle-java11-installer") #this requires enabling a PPA
-open_source_arch_java=("intellij-idea-community-edition" "jdk-openjdk")
-proprietary_arch_java=("intellij-idea-ultimate-edition" "jre-lts") #this requires yay or another AUR helper
-#distributor ID 
-distributor_id=("arch" "manjaro" "debian" "ubuntu" "linuxmint" "pop")
 
 #Greeting the user
 clear
