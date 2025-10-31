@@ -17,6 +17,8 @@
 
 #glbal variables 
 correct=false #this is used in input checks 
+source ../lib/parser.sh
+source /etc/os-release
 #names for open/closed source packages for Debian and Arch derivatives 
 
 #Greeting the user
@@ -33,10 +35,7 @@ echo "----------------------------------"
 #2) snap
 #3) yay 
 
-#This file has the ID of the linux distribution that is being used by the user. 
-#It is being sourced here so I can access the $ID
-. /etc/os-release
-
+get_arch_based_distros
 #I am only checking if snap is installed in Debian derivatives because none of the Arch one need it 
 if [ "$ID" = "${distributor_id[2]}" ] || [ "$ID" = "${distributor_id[3]}" ] || [ "$ID" = "${distributor_id[4]}" ] || [ "$ID" = "${distributor_id[5]}" ]; then 
     #checking if the snap package manager is available (it will be needed for some of the software installed)
