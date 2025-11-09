@@ -15,7 +15,14 @@
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #/bin/bash 
+PACKAGES_FILEPATH="../data/packages.json"
+DISTROS_FILEPATH="../data/distros.json"
 
-get_lang(){
-	
+get_arch_based_distros(){
+	jq '.distributor_id.debian_based' $DISTROS_FILEPATH
+}
+
+get_debian_based_distros(){
+	jq '.distributor_id.arch_based' $DISTROS_FILEPATH
+
 }

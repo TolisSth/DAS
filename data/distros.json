@@ -1,0 +1,14 @@
+{
+"distributor_id": {
+	"debian_based":[
+	    "debian",
+	    "ubuntu",
+	    "linuxmint",
+	    "pop"
+	],
+	"arch_based":[
+	    "arch",
+	    "manjaro"
+	]
+   }
+}
